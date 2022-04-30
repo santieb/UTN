@@ -1,33 +1,33 @@
 $(document).ready(() => {
 
   $("#suma").click(() => {
-    var n1 = $("#num1").val()
-    var n2 = $("#num2").val()
-    var res = parseFloat(n1) + parseFloat(n2)
+    let n1 = $("#num1").val()
+    let n2 = $("#num2").val()
+    let res = parseFloat(n1) + parseFloat(n2)
     $("#res").val(res)
   })
 
   $("#resta").click(() => {
-    var n1 = $("#num1").val()
-    var n2 = $("#num2").val()
-    var res = parseFloat(n1) - parseFloat(n2)
+    let n1 = $("#num1").val()
+    let n2 = $("#num2").val()
+    let res = parseFloat(n1) - parseFloat(n2)
     $("#res").val(res)
   })
 
   $("#multi").click(() => {
-    var n1 = $("#num1").val()
-    var n2 = $("#num2").val()
-    var res = parseFloat(n1) * parseFloat(n2)
+    let n1 = $("#num1").val()
+    let n2 = $("#num2").val()
+    let res = parseFloat(n1) * parseFloat(n2)
     $("#res").val(res)
   })
 
   $("#division").click(() => {
-    var n1 = $("#num1").val()
-    var n2 = $("#num2").val()
-    var validacion = esCero(parseFloat(n2))
+    let n1 = $("#num1").val()
+    let n2 = $("#num2").val()
+    let validacion = esCero(parseFloat(n2))
 
     if (validacion) {
-      var res = parseFloat(n1) / parseFloat(n2)
+      let res = parseFloat(n1) / parseFloat(n2)
       $("#res").val(res)
     }
     else { 
