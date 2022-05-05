@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.res {
+  margin: 5em;
+  font-size: 20px;
+  font-weight: bold;
+  color: #a199ea;
+  height: 150px;
+}
