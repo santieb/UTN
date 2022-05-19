@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2022 a las 00:10:14
--- Versión del servidor: 10.4.6-MariaDB
--- Versión de PHP: 7.2.22
+-- Tiempo de generación: 20-05-2022 a las 01:58:27
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -37,6 +36,13 @@ CREATE TABLE `hc` (
   `id_mascota` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `hc`
+--
+
+INSERT INTO `hc` (`id_hc`, `fregistro`, `tipo_sangre`, `peso`, `altura`, `id_mascota`) VALUES
+(1, '2012-12-12', 'A+', 25, 0.6, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -51,6 +57,14 @@ CREATE TABLE `mascota` (
   `raza` text NOT NULL,
   `id_responsable` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `mascota`
+--
+
+INSERT INTO `mascota` (`id_mascota`, `nombre`, `fnacimiento`, `especie`, `raza`, `id_responsable`) VALUES
+(1, 'roco', '2012-12-12', 'perro', 'ovejero', 1),
+(2, 'roco', '2012-12-12', 'perro', 'ovejero', 2);
 
 -- --------------------------------------------------------
 
@@ -77,7 +91,8 @@ INSERT INTO `responsable` (`id_res`, `nomyape`, `direccion`, `telefono`, `email`
 (5, 'juan', 'vapor amadeo', 2964252525, 'juan@gmail.com'),
 (6, 'victor', 'perito moreno', 2964225253, 'victor@gmail.com'),
 (7, 'carlos', 'catamarca 123', 2964987654, 'carlos@gmail.com'),
-(8, 'angel', 'viedma', 29642252525, 'angel@gmail.com');
+(8, 'angel', 'viedma', 29642252525, 'angel@gmail.com'),
+(9, '', 'dsadsa', 5656, 'dsaa@gdsad');
 
 --
 -- Índices para tablas volcadas
@@ -109,19 +124,19 @@ ALTER TABLE `responsable`
 -- AUTO_INCREMENT de la tabla `hc`
 --
 ALTER TABLE `hc`
-  MODIFY `id_hc` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_hc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `mascota`
 --
 ALTER TABLE `mascota`
-  MODIFY `id_mascota` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_mascota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `responsable`
 --
 ALTER TABLE `responsable`
-  MODIFY `id_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_res` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
