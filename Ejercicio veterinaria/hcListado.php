@@ -8,11 +8,11 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Listado de responsables</h1>
+  <h1>Listado de hc</h1>
 
   <?php
     include("conexion.php");
-    $sql = "SELECT * FROM mascota";
+    $sql = "SELECT * FROM hc";
     $res = mysqli_query($con, $sql);
     $cant = mysqli_num_rows($res);
 
@@ -21,12 +21,11 @@
   ?>
   <table style="table">
     <tr>
-      <td>Identificaciòn</td>
-      <td>Nombre</td>
-      <td>Fecha de nacimiento</td>
-      <td>Especie</td>
-      <td>raza</td>
-      <td>id responsable</td>
+      <td>fRegistro</td>
+      <td>tipo de sangre</td>
+      <td>peso</td>
+      <td>altura</td>
+      <td>id mascota</td>
     <tr>
       
   <?php
@@ -37,7 +36,6 @@
         <td> $vec[2]</td>
         <td> $vec[3]</td>
         <td> $vec[4]</td>
-        <td>$vec[5]</td>
         <tr>";
       }
       echo "</table>";
