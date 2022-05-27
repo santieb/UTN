@@ -8,7 +8,7 @@
     <title>Formulario Responsable</title>
 </head>
 <body>
-<form class="container mt-5" method="POST" action="responsableRegistrar.php">
+<form class="container mt-5" method="POST" action="../registros/responsableRegistrar.php">
   <div class="form-group">
     <label for="name">Nombre y apellido</label>
     <input type="name" class="form-control" name="name" id="name" placeholder="Nombre y apellido">

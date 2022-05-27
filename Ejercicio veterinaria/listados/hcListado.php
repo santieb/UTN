@@ -11,7 +11,7 @@
   <h1>Listado de hc</h1>
 
   <?php
-    include("conexion.php");
+  include("../conexion.php");
     $sql = "SELECT * FROM hc";
     $res = mysqli_query($con, $sql);
     $cant = mysqli_num_rows($res);
