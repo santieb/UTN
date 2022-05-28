@@ -1,3 +1,3 @@
 <?php
-  $con=mysqli_connect("localhost", "root", "", "veterinaria");
+  $con=mysqli_connect("localhost", "root", "", "automoviles");
 ?>
