@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <form class="container mt-5" method="POST" action="./register.php">
+  <form class="container mt-5" method="POST" action="./login.php">
     <div class="form-group">
       <label for="name">user</label>
       <input type="text" class="form-control" name="user" id="user" placeholder="user">
@@ -20,31 +20,8 @@
       <label for="contraseña">contraseña</label>
       <input type="password" class="form-control" name="contraseña" id="contraseña" placeholder="contraseña">
     </div>
-    <input type="submit" class="btn btn-primary" name="registrar" value="registrar"/>
+    <input type="submit" class="btn btn-primary" name="login" value="Login"/>
   </form>
-
-  <?php
-    include("./conexion.php");
-
-    if (isset($_POST["registrar"])) {
-      $user = $_POST["user"];
-      $pass = $_POST["contraseña"];
-
-      echo $user;
-      echo $pass;
-
-      $sql = "INSERT INTO user (user, pass) VALUES ('$user', '$pass')";
-
-      $res = mysqli_query($con, $sql);
-  
-      if ($res) {
-        echo "Registo Exitoso";
-      }
-      else {
-        echo $sql;
-      }
-    }
-  ?>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
