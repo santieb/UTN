@@ -14,25 +14,22 @@
   <form class="container mt-5" method="POST" action="./register.php">
     <div class="form-group">
       <label for="fingreso">fingreso</label>
-      <input type="text" class="form-control" name="fingreso" placeholder="fingreso">
+      <input type="date" class="form-control" name="fingreso" placeholder="fingreso">
     </div>
     <div class="form-group">
       <label for="motivo">motivo</label>
       <input type="text" class="form-control" name="motivo" placeholder="motivo">
     </div>
     <div class="form-group">
-      <label for="fegreso">fegreso</label>
-      <input type="date" class="form-control" name="fegreso" placeholder="fegreso">
-    </div>
-    <div class="form-group">
       <label for="Libro">Libro</label>
-      <select  class="form-control" name="especie" id="especie" placeholder="especie">
+      <select  class="form-control" name="libro" id="libro" placeholder="libro">
         <?php
         include("../conexion.php");
 
         $sql = "SELECT * FROM  libro";
         $res = mysqli_query($con, $sql);
 
+        echo "<option>--Seleccione un libro--</option>";
         foreach ($res as $row) {
             echo "<option>".$row['id']."</option>";
           }
@@ -47,18 +44,20 @@
     include("../conexion.php");
 
     if (isset($_POST["registrar"])) {
-      $titulo = $_POST["titulo"];
-      $editorial = $_POST["editorial"];
-      $fedicion = $_POST["fedicion"];
-      $idioma = $_POST["idioma"];
-      $paginas = $_POST["paginas"];
-      $estado = 'biblioteca';
+      $fingreso = $_POST["fingreso"];
+      $motivo = $_POST["motivo"];
+      $libro = $_POST["libro"];
 
-      $sql = "INSERT INTO `libro` (`titulo`, `editorial`, `fedicion`, `idioma`, `cantpaginas`, `estado`) VALUES ('$titulo', '$editorial', '$fedicion', '$idioma', '$paginas', '$estado')";
+      $sql = "INSERT INTO `reparacion` (`fingreso`, `motivo`, `fegreso`, `libro`) VALUES ('$fingreso', '$motivo', NULL, '$libro')";
+
+      echo $libro;
+
+      $sql2="UPDATE libro SET estado='reparacion' WHERE id=$libro";
+      $res2 = mysqli_query($con, $sql2);
 
       $res = mysqli_query($con, $sql);
   
-      if ($res) {
+      if ($res && $res2) {
         echo "Registo Exitoso";
       }
       else {
