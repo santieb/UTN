@@ -30,11 +30,6 @@
           echo "<td>".$row['fegreso']."</td>";
           echo "<td>".$row['motivo']."</td>";
           echo "<td>".$row['libro']."</td>";
-          echo "<td>";
-          echo "<a href='update.php?id=".$row['id']."'>Editar</a>";
-          echo "&nbsp;&nbsp;";
-          echo "<a href='delete.php?id=".$row['id']."'>Eliminar</a>";
-          echo "</td>";
           echo "</tr>";
       }
         echo "</table>";

@@ -10,7 +10,7 @@
     <h1>Listado</h1>
     <?php
     include("../conexion.php");
-    $sql = SELECT reparacion.id libro.* FROM reparacion, libro where reparacion.libro = libro.id";
+    $sql = "SELECT * FROM libro where estado='reparacion'";
     $res = mysqli_query($con, $sql);
     $cant = mysqli_num_rows($res);
     if($cant > 0) {
