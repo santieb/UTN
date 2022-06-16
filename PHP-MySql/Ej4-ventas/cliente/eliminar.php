@@ -1,8 +1,8 @@
 <?php
   include("../conexion.php");
-  $id = $_GET["id"];
+  $id = $_GET["cod_cliente"];
     
-  $sql = "DELETE FROM libro WHERE id=$id";
+  $sql = "DELETE FROM cliente WHERE cod_cliente=$id";
   $res = mysqli_query($con, $sql);
   if($res) echo "Elimnado correctamente";
   else echo "Error";

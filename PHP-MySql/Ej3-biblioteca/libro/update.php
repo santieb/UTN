@@ -8,7 +8,6 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Formulario</title>
 </head>
-<body>
     <?php
     include("../conexion.php");
     $id = $_GET["id"];
@@ -18,7 +17,7 @@
 
     if (!$libro) echo "no se encontro el libro";
     ?>
-
+  <body>
     <h2>Modificar</h2>
     <form class="container mt-5" method="POST" action="./updateCtrl.php">
     <div class="form-group">

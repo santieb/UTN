@@ -9,8 +9,6 @@
   $paginas = $_POST["cantpaginas"];
   $estado = $_POST['estado'];
 
-  echo $estado;
-
   if ($estado == 'biblioteca' ||  $estado == 'reparacion' ||  $estado == 'prestado') {
     $sql="UPDATE libro SET titulo='$titulo', editorial='$editorial', fedicion='$fedicion', idioma='$idioma', cantpaginas='$paginas', estado='$estado' WHERE id=$id";
     $res = mysqli_query($con, $sql);
