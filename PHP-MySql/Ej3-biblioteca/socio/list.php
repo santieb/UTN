@@ -9,7 +9,7 @@
 <body>
     <h1>Listado</h1>
     <?php
-    include("../conexion.php");
+    include("./conexion.php");
     $sql = "SELECT * FROM socio";
     $res = mysqli_query($con, $sql);
     $cant = mysqli_num_rows($res);
